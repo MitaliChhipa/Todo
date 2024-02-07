@@ -1,0 +1,42 @@
+<div>
+    <button class="log-out-btn" (click)="logOut()"> LogOut</button>
+</div>
+<body>
+
+<div >
+    <input class="search form-control" name="search" type="text" title="Search" placeholder="Search"  (input)="search($event)">
+</div>
+<div class="scroll">
+<table >
+    <tr> 
+        <th>index</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Incomplete tasks</th>
+       
+    </tr>
+    <tr *ngFor="let task of filterTodoArr;let i=index">
+    <td >{{i+1}}</td>
+    <td>{{task.title}}</td>
+    <td>{{task.description}}</td>
+    <td>{{task.date | date:"d/MM/YY"}}</td>
+    <td><button class="delete" (click)="deleteTask(i)">Completed</button></td>
+   
+
+</tr>
+</table>
+</div>
+<button class="addTask" *ngIf="toggleAdd" (click)="Add()">Add Task</button>
+<form *ngIf="toggleForm" #todo ="ngForm" class="todo-form">
+    <label for="title">Title</label>
+    <input type="text" name="title" placeholder="Enter the title of the task" required [(ngModel)]="todoValue.title"><br>
+    <label for="description">Description</label>
+    <input type="text" name="description" placeholder="Description" required [(ngModel)]="todoValue.description"><br>
+    <label for="date">Date</label>
+    <input type="date" name="date" placeholder="Date" required [(ngModel)]="todoValue.date"><br>
+    <button class="add" (click)="addTask()" [disabled]="!todo.valid">Add</button>
+</form>
+</body>
+
+

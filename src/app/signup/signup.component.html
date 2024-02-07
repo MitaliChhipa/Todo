@@ -1,0 +1,34 @@
+
+<html>
+<body>
+
+<div class="login-container">
+    
+    <div class="img-container">
+    <img src="https://i.pinimg.com/564x/d0/46/e6/d046e625254cf964abe989cfdcc68f13.jpg" alt="img">
+    </div>
+<div class ="form-container">
+    
+<form #signupform="ngForm">
+    <div class="title">{{title}}</div>
+    <label for="name">Email :</label><br>
+    <input #email="ngModel" type="Email"  name="Email" id="name" placeholder="Enter Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="signupobj.email"><br>
+    <label for="username">Username :</label>
+    <input #username="ngModel" type="text" name="username" id="username" placeholder="Enter Username" required [(ngModel)]="signupobj.username" ><br>
+    <!-- <div class="error" *ngIf="username.errors?.['required']">This field is required</div> -->
+    <label for="password">Password :</label>
+    <input #password="ngModel" type="password" name="password" id="password" placeholder="Enter password" minlength="8" maxlength="100" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$()" [(ngModel)]="signupobj.password" >
+    <!-- <div class="error" *ngIf="password.errors?.['required']">This field is required</div>
+    <div class="error" *ngIf="password.errors?.['minlength']">Password is too short</div>
+    <div class="error" *ngIf="password.errors?.['minlength']">Password is too long</div> -->
+    
+    <button (click)="SignupUser()" [disabled]="!signupform.valid">SignUp</button>
+    <button [routerLink]="['/login']">Already have an account</button>
+</form>
+
+
+</div>
+</div>
+
+</body>
+</html>

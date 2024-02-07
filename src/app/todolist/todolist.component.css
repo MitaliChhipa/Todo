@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  
+  
+}
+.addTask{
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10%;
+  border: none;
+  color: #fff;
+  margin-top:30px;
+}
+.search{
+
+width: 77%;
+margin-left: 10% ;
+padding: 10px;
+border-radius: 19px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border:rgb(141, 140, 140);
+margin-bottom:10px;
+margin-bottom: 10px;
+}
+.todo-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #e6eff5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .todo-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .todo-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .todo-form button:hover {
+    background-color: #0062cc;
+  }
+table {
+  width: 100%;
+  margin-top:2%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  /* max-height: 40px;
+  overflow: scroll; */
+  margin-left: 10%;
+  width:80%;
+  
+  
+}
+
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  
+}
+
+th {
+ 
+  background-color: #abd8f5;;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+/* tr:hover {
+  background-color: #c0e6ff;
+} */
+.scroll{
+  overflow-y: scroll;
+  max-height: 300px;
+}
+.log-out-btn{
+  right: 0px;
+  top:0px;
+  background-color: rgb(250, 204, 204);
+  color: #f9f9f9;
+  margin:10px ;
+  margin-left:90%;
+  font-size: 20px;
+  border-radius: 30px;
+  border: none;
+    cursor: pointer;
+    font:bold;
+    padding:10px
+    
+}
+
+.log-out-btn:hover{
+  background-color: rgb(211, 3, 3);
+}
+.delete{
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 10px;
+  
+  align-content: center;
+  border: none;
+  color: #fff;
+}
+
+button:hover{
+  background-color: #0062cc;
+}
+
+.add{
+  margin-top:10px;
+  margin-left:160px;
+}
+
+@media (max-width: 420px){
+  .todo-form{
+    margin-left: 25%;
+  }
+  .add{
+    translate: -80px 1px;
+  }
+  table{
+    translate: -35px 1px;
+  }
+ 
+}
+
